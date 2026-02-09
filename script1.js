@@ -171,60 +171,87 @@
 //         goToPlayground();
 //     });
 // }); 
-const p=new Promise(function(resolve,reject){
-    setTimeout(()=>{
-        let done=false;
-        if(done){
-            resolve({name:"alex",age:34})
-        }else{
-            reject("Network issue")
-        }
-    },5000)
-})
-p.then((data)=>{
-    console.log("Resolved",data)
-}).catch((err)=>{
-    console.log("Rejected",err)
-}) 
+// const p=new Promise(function(resolve,reject){
+//     setTimeout(()=>{
+//         let done=false;
+//         if(done){
+//             resolve({name:"alex",age:34})
+//         }else{
+//             reject("Network issue")
+//         }
+//     },5000)
+// })
+// p.then((data)=>{
+//     console.log("Resolved",data)
+// }).catch((err)=>{
+//     console.log("Rejected",err)
+// }) 
 
-function doHomeowork(){
-    const p=new Promise(function(resolve,reject){
-        setTimeout(()=>{
-            let done=true;
-            if(done){
-                console.log("Homeowork is done")
-            }else{
-                reject("Homework is not done")
-            }
-        },2000)
-    })
-    return p
-}
+// function doHomeowork(){
+//     const p=new Promise(function(resolve,reject){
+//         setTimeout(()=>{
+//             let done=true;
+//             if(done){
+//                 console.log("Homeowork is done")
+//             }else{
+//                 reject("Homework is not done")
+//             }
+//         },2000)
+//     })
+//     return p
+// }
 
-function eatDinnerk(){
-    const p=new Promise(function(resolve,reject){
-        setTimeout(()=>{
-            let done=true;
-            if(done){
-                console.log("Dinner is done")
-            }else{
-                reject("Dinner is not done")
-            }
-        },2000)
-    })
-    return p
-}
+// function eatDinnerk(){
+//     const p=new Promise(function(resolve,reject){
+//         setTimeout(()=>{
+//             let done=true;
+//             if(done){
+//                 console.log("Dinner is done")
+//             }else{
+//                 reject("Dinner is not done")
+//             }
+//         },2000)
+//     })
+//     return p
+// }
 
-doHomeowork().then((data)=>{
-    console.log(data)
-    return eatDinner()
-}).then((data)=>{
-    console.log(data)
-    return goToPlayground()
-}).then((data)=>{
-    console.log(data)
-}).catch((err)=>{
-    console.log(err)
-}).finally(()=>{
-    console.log("Go to Sleep")
-})
+// doHomeowork().then((data)=>{
+//     console.log(data)
+//     return eatDinner()
+// }).then((data)=>{
+//     console.log(data)
+//     return goToPlayground()
+// }).then((data)=>{
+//     console.log(data)
+// }).catch((err)=>{
+//     console.log(err)
+// }).finally(()=>{
+//     console.log("Go to Sleep")
+// })
+
+// 9 feb 2026 
+
+// console.log("First Line")
+// setTimeout(() => {
+//     console.log("Inside Timeout")
+// },0);
+// const p=new Promise((resolve,reject)=>{
+//     resolve()
+// })
+
+// p.then(()=>{
+//     console.log("Inside Promise")
+// }).catch(()=>{
+//     console.log("Inside Catch")
+// })
+
+// const p2=new Promise((resolve,reject)=>{
+//     resolve()
+// })
+
+// p2.then(()=>{
+//     console.log("Inside Promise2")
+// }).catch(()=>{
+//     console.log("Inside Catch2")
+// })
+// console.log("Last Line")
