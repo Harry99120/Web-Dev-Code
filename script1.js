@@ -255,3 +255,82 @@
 //     console.log("Inside Catch2")
 // })
 // console.log("Last Line")
+// const form=document.querySelector("#form")
+// const eventCards=document.querySelector(".event_cards")
+
+// function orderFood() {
+//   return new Promise(function (resolve, reject) {
+//     setTimeout(() => {
+//       console.log("Food Ordered");
+//       resolve("Food Ordered");
+//     }, 1000);
+//   });
+// }
+
+// function prepareFood() {
+//   return new Promise(function (resolve, reject) {
+//     setTimeout(() => {
+//       console.log("Food Prepeared");
+//       resolve("Food Prepeared");
+//     }, 1000);
+//   });
+// }
+
+// function deliverFood() {
+//   return new Promise(function (resolve, reject) {
+//     setTimeout(() => {
+//       console.log("Food Delivered");
+//       resolve("Food Delivered");
+//     }, 1000);
+//   });
+// }
+
+// orderFood().then((data)=>{
+//     console.log(data)
+//     return prepareFood()
+// }).then((data)=>{
+//     console.log(data)
+//     return deliverFood()
+// }).then((data)=>{
+//     console.log(data)
+// }).catch((err)=>{
+//     console.log(err)
+// })
+
+// async function order(){
+//     const data=await orderFood()
+//     console.log(data)
+//     await prepareFood()
+//     await deliverFood()
+// }
+
+// order()
+
+// console.log("First line")
+// try{
+//     // console.log(sample)
+//     let age=19
+//     if(age<18){
+//         //error
+//         throw new Error("Access Denied")
+//     }
+// }catch(err){
+//     console.log(err)
+// }finally{
+//     console.log("finally block")
+// }
+
+// console.log("last line")
+
+// async function getData(){
+//     try{
+//         const response= await fetcg("https://dummyjson.com/products")
+//         console.log(response.ok)
+//         if (response.ok===false) throw new Error("data not found")
+//         const data= await response.json()
+//         console.log(data)
+//     }catch(error){
+//        console.log("data not found")
+//     }
+// }
+// getData()
