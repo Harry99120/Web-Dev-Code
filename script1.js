@@ -335,59 +335,46 @@
 // }
 // getData()
 
-async function sendData(){
-    try{
-        const response=await fetch('https://dummyjson.com/products/add' , {
-            method : 'POST' ,
-            headers : {'Content-Type':'application/json'},
-            body: JSON.stringify({
-                title :"Macbook Pro",
-                description : "Macbook Pro",
-                Price:100000,
-                discountPercentage:5,
-                rating:4.5,
-                stock:5,
-                brand:"Apple",
-            })
-        })
-        const data=await response.json()
-        console.log(data)
-    }catch(error){
-        console.log("Data not found") 
+// function* generate(){
+//     yield 1
+//     yield 2
+//     yield 3
+
+//     for (let index = 1; index < 4; index++) {
+//         yield index 
+//     }
+//     let i=1;
+//     while (true){
+//         yield 1 
+//         i++
+//     }
+// }
+
+// const gen=generate();
+// console.log(gen.next())
+// console.log(gen.next())
+// console.log(gen.next())
+// console.log(gen.next())
+
+function add(a){
+    return function(b){
+        return function(c){
+            return a+b+c
+        }
     }
 }
-sendData() 
+console.log(add(1)(2)(3))
 
-let obj={
-    title:"Macbook",
-    description :"Macbook Pro",
+// 2.
+function add(a){
+    return function(b){
+        return function(c){
+            return a+b+c
+        }
+    }
 }
 
-localStorage.setItem("Obj",JSON.stringify(Obj))
-localStorage.setItem("name","Harmeet Bhati")
-localStorage.setItem("age",20)
-console.log(localStorage.getItem("name"))
-console.log(localStorage.getItem("age"))
-console.log(JSON.parse(localStorage.getItem("obj")))
-
-localStorage.removeItem("age")
-
-//localstorage.clear()
-
-sessionStorage.setItem("obj",JSON.stringify(obj))
-sessionStorage.setItem("name","Harmeet Bhati")
-sessionStorage.setItem("age",20)
-console.log(localStorage.getItem("name"))
-console.log(localStorage.getItem("age"))
-console.log(JSON.parse(localStorage.getItem("obj")))
-sessionStorage.removeItem("age")
-
-document.cookie="name=Harmeet Bhati ; expires=Sat 21 Feb 2026 12:00:00 UTC"
-document.cookie="age=20; expires=Sat 21 Feb 2026 12:00:00 UTC"
-
-console.log(document.cookie)
-
-async function sample(){
-    await fetch("https://127.0.0.1:5500/index.html")
-}
-sample() 
+const first=add(1)
+const second=first(3)
+const third=second(2)
+// console.log(third)
